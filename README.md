@@ -3,15 +3,6 @@
 
 This document outlines a comprehensive workflow for categorizing student task descriptions using various NLP techniques and models.
 
-## Table of Contents
-1. [Problem Overview](#problem-overview)
-2. [Workflow Overview](#workflow-overview)
-3. [Data Preparation](#1--data-collection-and-preprocessing)
-4. [Feature Engineering](#4--text-embeddings)
-5. [Model Development](#5--model-selection-and-training)
-6. [Advanced Techniques](#7--prompt-engineering)
-7. [Summary and Next Steps](#summary-and-next-steps)
-
 ## Problem Overview
 **Problem Statement:**
 - Text data from ~700 students over a 15-week semester
