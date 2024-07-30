@@ -1,7 +1,25 @@
-
 # Categorizing Student Task Descriptions Using NLP
 
 This document outlines a comprehensive workflow for categorizing student task descriptions using various NLP techniques and models.
+
+## Table of Contents
+- [Problem Overview](#problem-overview)
+- [Workflow Overview](#workflow-overview)
+- [Data Preparation](#1--data-collection-and-preprocessing)
+   - 1- [Data Collection and Preprocessing](#1--data-collection-and-preprocessing)
+   - 2- [Exploratory Data Analysis (EDA)](#2--exploratory-data-analysis)
+   - 3- [Text Preprocessing](#3--text-preprocessing)
+- [Feature Engineering](#4--text-embeddings)
+   - 4- [Text Embeddings](#4--text-embeddings)
+- [Model Development](#5--model-selection-and-training)
+   - 5- [Model Selection and Training](#5--model-selection-and-training)
+   - 6- [Model Evaluation](#6--model-evaluation)
+- [Advanced Techniques](#7--prompt-engineering)
+   - 7- [Prompt Engineering](#7--prompt-engineering)
+   - 8- [Large Language Models (LLMs)](#8--large-language-models)
+   - 9- [Fine-Tuning LLMs](#9--fine-tuning-llms)
+   - 10- [Combining Approaches](#10--combining-approaches)
+- [Summary and Next Steps](#summary-and-next-steps)
 
 ## Problem Overview
 **Problem Statement:**
