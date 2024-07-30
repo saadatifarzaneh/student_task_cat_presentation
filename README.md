@@ -70,7 +70,7 @@ df = pd.DataFrame(data)
 print(df)
 ```
 
-## 2- Exploratory Data Analysis (EDA)
+## 2- Exploratory Data Analysis
 **Goals:**
 - Understand the distribution of text data
 - Visualize the frequency of categories
@@ -214,3 +214,63 @@ with torch.no_grad():
 - OpenAI GPT-3, GPT-4, or similar models
 - API interfaces for prompt-based interactions
 
+## 8- Large Language Models
+**Advantages:**
+- Leverage the power of LLMs to understand and categorize text with high accuracy
+- Reduce the need for extensive labeled data
+- Adapt to various text classification tasks with minimal adjustments
+
+**Implementation:**
+- Use pre-trained models like GPT-3, GPT-4, BERT, etc.
+- Fine-tune LLMs on your specific dataset to improve performance
+
+**Example:**
+```python
+from transformers import GPT2Tokenizer, GPT2LMHeadModel
+
+# Load pre-trained model and tokenizer
+tokenizer = GPT2Tokenizer.from_pretrained('gpt2')
+model = GPT2LMHeadModel.from_pretrained('gpt2')
+
+# Encode the prompt
+input_text = "Classify the following research task description: 'Conducted a literature review on AI ethics' into one of the following categories: [Category List]"
+input_ids = tokenizer.encode(input_text, return_tensors='pt')
+
+# Generate response
+outputs = model.generate(input_ids, max_length=50, num_return_sequences=1)
+response = tokenizer.decode(outputs[0], skip_special_tokens=True)
+```
+
+## 9- Fine-Tuning LLMs
+**Fine-Tuning Approaches:**
+1. **Models that can be fine-tuned:**
+   - Some models, like GPT-2, BERT, etc., can be fine-tuned using frameworks like Hugging Face.
+   - Fine-tuning involves training the model on a specific dataset to improve performance on that dataset.
+
+2. **Models that cannot be fine-tuned directly:**
+   - Some models, like GPT-3 and GPT-4, cannot be fine-tuned directly.
+   - For these models, we use prompt engineering to achieve better results by creating effective prompts.
+
+## 10- Combining Approaches
+**Steps:**
+- Combine traditional NLP techniques with prompt engineering and LLMs
+- Use LLMs for initial categorization and traditional models for fine-tuning
+- Continuously evaluate and refine both approaches
+
+**Benefits:**
+- Enhanced accuracy and robustness
+- Flexibility to adapt to new text data
+- Efficient handling of diverse text classification tasks
+
+## Summary and Next Steps
+**Summary:**
+- Presented a comprehensive workflow including advanced text embeddings, prompt engineering, and LLMs
+- Highlighted the importance of combining different approaches for optimal performance
+
+**Next Steps:**
+- Implement and test the workflow with your dataset
+- Continuously monitor and refine the models
+- Explore additional techniques to further enhance classification accuracy
+
+## Q&A
+**Questions and Discussion:**
