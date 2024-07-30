@@ -1,5 +1,3 @@
-# Categorizing Student Task Descriptions Using NLP
-
 ## Problem Overview
 **Problem Statement:**
 - Text data from ~700 students over a 15-week semester
@@ -135,3 +133,42 @@ plt.ylabel('Frequency')
 plt.title('Frequency Distribution of Categories')
 plt.show()
 ```
+
+## 3- Text Preprocessing
+**Steps:**
+- Tokenization: Split text into words
+- Lowercasing: Convert text to lowercase
+- Stopword Removal: Remove common words (e.g., "and", "the")
+- Lemmatization/Stemming: Reduce words to their root forms
+
+**Tools:**
+- NLTK or SpaCy for NLP tasks
+
+## 4- Text Embeddings
+**Steps:**
+- Use advanced text embeddings to convert text into numerical form
+- Techniques: Word2Vec, GloVe, FastText, BERT, or other Transformer-based embeddings
+
+**Tools:**
+- Gensim for Word2Vec and FastText
+- Hugging Face Transformers for BERT and other transformer models
+
+**Example:**
+```python
+from transformers import BertTokenizer, BertModel
+
+# Load pre-trained model tokenizer
+tokenizer = BertTokenizer.from_pretrained('bert-base-uncased')
+
+# Tokenize input text
+input_ids = tokenizer.encode("Your text here", return_tensors='pt')
+
+# Load pre-trained model
+model = BertModel.from_pretrained('bert-base-uncased')
+
+# Get hidden states
+with torch.no_grad():
+    outputs = model(input_ids)
+    hidden_states = outputs.last_hidden_state
+```
+
